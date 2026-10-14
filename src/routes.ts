@@ -34,11 +34,11 @@ routes.post("/matriculas/:id", authentication, matriculaController.create);
 routes.delete("/matriculas/:id", authentication, matriculaController.delete);
 
 // Rotas de funcionários
-routes.get("/funcionario", authentication, isAdmin, alunoController.list)
-routes.get("/funcionario/:id", authentication, isAdminOrHimself, alunoController.getById);
-routes.post("/funcionario", authentication, isAdmin, alunoController.create);
-routes.put("/funcionario/:id", authentication, isAdminOrHimself, alunoController.update);
-routes.delete("/funcionario/:id", authentication, isAdmin, alunoController.delete);
+routes.get("/funcionarios", authentication, isAdmin, funcionarioController.list)
+routes.get("/funcionarios/:id", authentication, isAdminOrHimself, funcionarioController.getById);
+routes.post("/funcionarios", authentication, isAdmin, funcionarioController.create);
+routes.put("/funcionarios/:id", authentication, isAdminOrHimself, funcionarioController.update);
+routes.delete("/funcionarios/:id", authentication, isAdmin, funcionarioController.delete);
 
 // Rotas de funcionários
 routes.post("/login", funcionarioController.login)
