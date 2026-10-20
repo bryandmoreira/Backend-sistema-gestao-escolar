@@ -8,15 +8,8 @@ export default {
   list: async (request: Request, response: Response) => {
     try {
       const funcionarios = await prisma.funcionario.findMany({
-        select: {
-          id: true,
-          nome: true,
-          email: true,
-          cargo: true,
-          nascimento: true,
-          cpf: true,
-          telefone: true,
-          endereco: true,
+        omit: {
+          senha: true,
         },
       });
 
@@ -34,15 +27,8 @@ export default {
         where: {
           id: +id,
         },
-        select: {
-          id: true,
-          nome: true,
-          email: true,
-          cargo: true,
-          nascimento: true,
-          cpf: true,
-          telefone: true,
-          endereco: true,
+        omit: {
+          senha: true,
         },
       });
 
@@ -80,15 +66,8 @@ export default {
           telefone,
           endereco,
         },
-        select: {
-          id: true,
-          nome: true,
-          email: true,
-          cargo: true,
-          nascimento: true,
-          cpf: true,
-          telefone: true,
-          endereco: true,
+        omit: {
+          senha: true,
         },
       });
 
@@ -128,15 +107,8 @@ export default {
           telefone,
           endereco,
         },
-        select: {
-          id: true,
-          nome: true,
-          email: true,
-          cargo: true,
-          nascimento: true,
-          cpf: true,
-          telefone: true,
-          endereco: true,
+        omit: {
+          senha: true,
         },
       });
 
@@ -154,15 +126,8 @@ export default {
         where: {
           id: +id,
         },
-        select: {
-          id: true,
-          nome: true,
-          email: true,
-          cargo: true,
-          nascimento: true,
-          cpf: true,
-          telefone: true,
-          endereco: true,
+        omit: {
+          senha: true,
         },
       });
 

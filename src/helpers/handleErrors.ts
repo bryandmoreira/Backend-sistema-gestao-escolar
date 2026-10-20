@@ -1,5 +1,5 @@
 import { Response } from "express"
-import { Prisma } from "../../generated/prisma/client";
+import { Prisma } from "../../../API-blue-lock-Bryan/generated/prisma/client";
 import prismaErrorCodes from "./prismaErrorCodes.json";
 
 export function handleErrors(e: any, response: Response) {
